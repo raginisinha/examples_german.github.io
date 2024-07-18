@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Center Aligned Title</title>
+<style>
+    body {
+        margin: 0 auto;
+        max-width: 950px; /* Adjust as needed */
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .audio-column {
+        flex: 1;
+        margin: 0 10px;
+        text-align: left;
+		margin-bottom: 20px;
+    }
+    img {
+        width: 100%;
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+<h1>Evaluating Speaker-conditioned Target Speaker Extraction Algorithms for Hearing-Impaired Listeners</h1>
+<section>
+    <center>Ragini Sinha, Ann-Christin Scherer, Simon Doclo, Christian Rollwage, Jan Rennies</center>
+	
+    <p><b>Abstract:</b>Speaker-conditioned target speaker extraction algorithms aim at estimating the target speaker from a mixture of multiple speakers utilizing auxiliary information about the target speaker. Previous studies evaluated the performance of such algorithms based on either instrumental measures or subjective evaluation with normal-hearing listeners. This study investigated the subjective performance with hearing-impaired listeners for two different conditions. First, when no hearing loss compensation was provided to the listeners (unaided condition), and second, when a linear hearing loss compensation was provided (aided condition). Three different subjective performance measurement methods were employed to evaluate two different deep neural network-based target speaker extraction algorithms, namely: paired comparison, speech intelligibility measurement, and categorically scaled listening effort. The subjective evaluation results with fifteen hearing-impaired listeners showed significantly lower listening effort and better intelligibility when utilizing one of the considered algorithms compared to the unprocessed stimuli and the other algorithm. The same algorithm was also preferred in direct comparison. The data suggests that hearing-impaired listeners experience even better reduction of listening effort and greater improvement in speech recognition thresholds than normal-hearing listeners.</p>
+  </section>
+
+<h1>Audio examples (German matrix sentences)</h1>
+<center>Both algorithms were trained on the WSJ0 dataset (English) with 101 different speakers</center>
+<center><b>One male interfering speaker:</b></center>
+<div class="container">
+    <div class="audio-column">
+		<center><p>Unprocessed</p></center>
+        <audio controls>
+            <source src="03491_3_1male_unp.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+    <div class="audio-column">
+		<center><p>Algo-1</center></p>
+        <audio controls>
+            <source src="03491_3_1male_algo1.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+    <div class="audio-column">
+		<center><p>Algo-2</center></p>
+        <audio controls>
+            <source src="03491_3_1male_algo2.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+</div>
+
+<center><b>One female interfering speaker:</b></center>
+<div class="container">
+    <div class="audio-column">
+		<center><p>Unprocessed</center></p>
+        <audio controls>
+            <source src="F_74972_9_unp.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+    <div class="audio-column">
+		<center><p>Algo-1</center></p>
+        <audio controls>
+            <source src="F_74972_9_algo1.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+    <div class="audio-column">
+		<center><p>Algo-2</center></p>
+        <audio controls>
+            <source src="F_74972_9_algo2.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+</div>
+
+<center><b>Two male interfering speakers:</b></center>
+<div class="container">
+    <div class="audio-column">
+		<center><p>Unprocessed</center></p>
+        <audio controls>
+            <source src="74972_8_2male_unp.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+    <div class="audio-column">
+		<center><p>Algo-1</center></p>
+        <audio controls>
+		
+            <source src="74972_8_2male_algo1.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+    <div class="audio-column">
+	
+		<center><p>Algo-2</center></p>
+        <audio controls>
+            <source src="74972_8_2male_algo2.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+</div>
+
+<center><b>Two female interfering speakers:</b></center>
+<div class="container">
+    <div class="audio-column">
+		<center><p>Unprocessed</center></p>
+        <audio controls>
+            <source src="FF_47173_5_unp.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+    <div class="audio-column">
+		<center><p>Algo-1</center></p>
+        <audio controls>
+            <source src="FF_47173_5_algo1.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+    <div class="audio-column">
+		<center><p>Algo-2</center></p>
+        <audio controls>
+            <source src="FF_47173_5_algo2.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+</div>
+
+<h1>Objective performance evaluations of Algo-1 and Algo-2:</h1>
+<center><p>The results shown here are obtained on test-set of the Librispeech dataset <a href="url">https://www.openslr.org/12</a></p></center>
+	<div class="container">
+    <div class="audio-column">
+		<center><img src="sdr_both.png" alt="SDR"></center>
+    </div>
+    <div class="audio-column">
+        <center><img src="pesq_both.png" alt="PESQ"></center>
+    </div>
+    <div class="audio-column">
+        <center><img src="stoi_both.png" alt="STOI"></center>
+    </div>
+</div>
+
+</body>
+</html>
+
