@@ -40,7 +40,7 @@
 
 <h1>Audio examples (German matrix sentences)</h1>
 <center>Both algorithms were trained on the WSJ0 dataset (English) with 101 different speakers</center>
-<center><b>One male interfering speaker:</b></center>
+<center><b>One Male Interfering Speaker:</b></center>
 <div class="container">
     <div class="audio-column">
 		<center><p>Unprocessed</p></center>
@@ -68,7 +68,7 @@
     </div>
 </div>
 
-<center><b>One female interfering speaker:</b></center>
+<center><b>One Female Interfering Speaker:</b></center>
 <div class="container">
     <div class="audio-column">
 		<center><p>Unprocessed</center></p>
@@ -96,7 +96,7 @@
     </div>
 </div>
 
-<center><b>Two male interfering speakers:</b></center>
+<center><b>Two Male Interfering Speakers:</b></center>
 <div class="container">
     <div class="audio-column">
 		<center><p>Unprocessed</center></p>
@@ -126,7 +126,7 @@
     </div>
 </div>
 
-<center><b>Two female interfering speakers:</b></center>
+<center><b>Two Female Interfering Speakers:</b></center>
 <div class="container">
     <div class="audio-column">
 		<center><p>Unprocessed</center></p>
@@ -168,12 +168,50 @@
     </div>
 </div>
 
-<h1>Subjective performance evaluations of Algo-1 and Algo-2 for normal-hearing(NH), and hearing-impaired (HI) listeners in both unaided and aided conditions:</h1>
-<center><p>Perceived listening effort ratings for unprocessed stimuli and stimuli processed using Algo-1, and Algo-2:</p></center>
+<h1>Subjective performance evaluations of Algo-1 and Algo-2 for normal-hearing(NH), and hearing-impaired listeners in both unaided and aided conditions:</h1>
+<center><p><b>1. Paired Comparisons: </b> percentage of wins in the paired comparison tests obtained for each pair of the three processing conditions (unprocessed, Algo-1, and Algo-2) for NH and HI listeners for stimuli having one interfering (F/M) and two interfering speaker(s) (FF/MM).</p></center>
+	<div>
+    <div class="plot">
+		<iframe src="PC_algo1vsunpr.html"
+			width="100%", height="500px"
+			frameboarder="0"></iframe>
+    </div>
+	<div class="plot">
+		<iframe src="PC_algo2vsunpr.html"
+			width="100%", height="500px"
+			frameboarder="0"></iframe>
+    </div>
+	<div class="plot">
+		<iframe src="PC_algos.html"
+			width="100%", height="500px"
+			frameboarder="0"></iframe>
+    </div>
+</div>
+
+<center><p><b>2. Speech Recognition Thresholds: </b> SRTs and corresponding benefits for NH and HI listeners for unprocessed stimuli and stimuli processed using Algo-1, and Algo-2. FF and MM represent two female and male interfering speakers, respectively.</p></center>
+	<div>
+    <div class="plot">
+		<iframe src="srt_plot.html"
+			width="100%", height="500px"
+			frameboarder="0"></iframe>
+    </div>
+	<div class="plot">
+		<iframe src="srt_plot_improvement.html"
+			width="100%", height="500px"
+			frameboarder="0"></iframe>
+    </div>
+</div>
+
+<center><p><b>3. Perceived Listening Effort: </b> perceived listening effort ratings and corresponding benefits for NH and HI listeners for unprocessed stimuli having one interfering speaker (F/M) and two interfering speakers (FF/MM) and stimuli processed using Algo-1, and Algo-2. F and M represents gender of the interfering speaker(s), F: female and M: male.</p></center>
 	<div>
     <div class="plot">
 		<iframe src="le_plot.html"
-			width="100%", height="960px"
+			width="100%", height="900px"
+			frameboarder="0"></iframe>
+    </div>
+	<div class="plot">
+		<iframe src="le_plot_effort.html"
+			width="100%", height="500px"
 			frameboarder="0"></iframe>
     </div>
 </div>
